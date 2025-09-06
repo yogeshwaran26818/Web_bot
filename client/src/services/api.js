@@ -1,7 +1,9 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: '/api'
+  baseURL: process.env.NODE_ENV === 'production' 
+    ? 'https://your-backend-url.com/api' 
+    : '/api'
 })
 
 export const uploadLink = (url, token) => 
