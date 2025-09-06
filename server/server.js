@@ -39,5 +39,5 @@ app.post('/api/debug/create-user', async (req, res) => {
   res.json(user);
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+module.exports = app;
